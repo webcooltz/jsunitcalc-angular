@@ -1,0 +1,19 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-distance',
+  templateUrl: './distance.component.html',
+  styleUrls: ['./distance.component.css']
+})
+export class DistanceComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  miles = 1;
+
+  kilometers = 1.61;
+
+}
