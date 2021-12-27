@@ -5,14 +5,15 @@
   </head>
   <body>
     <header>
-      <div id="header-div" class="">
+      <div id="" class="header-div">
         <h1>{{ title }}</h1>
       </div>
       <div id="nav-div">
-        <nav class="">
+        <nav class="nav-style">
           <ul>
             <li class="w3-red"><a routerLink="/temperature-component" routerLinkActive="active">Temperature</a></li>
             <li class="w3-yellow"><a routerLink="/distance-component" routerLinkActive="active">Distance</a></li>
+            <li class="w3-blue"><a routerLink="/weight-component" routerLinkActive="active">Weight</a></li>
           </ul>
         </nav>
       </div>
@@ -25,7 +26,7 @@
     <br>
     <footer>
       <div id="footer-div" class="">
-        &copy; 2021 webcooltz
+        &copy; {{ year | date:'yyyy'}} {{ author }}
       </div>
     </footer>
   </body>

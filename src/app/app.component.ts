@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'jsunitcalc';
+  author = 'Webcooltz';
+  year = new Date();
 }

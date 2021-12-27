@@ -1,19 +1,23 @@
-<h3>Temperature</h3>
+<div class="conversion-container">
 
-<div id="c-to-f" class="conversion-div w3-red">
-  Celsius to Fahrenheit
-  <br><br>
-  Celsius: <input type="text" [(ngModel)]="celsius">
-  <br><br>
-  Fahrenheit: {{ (celsius * (9 / 5)) + 32 | number }}
-</div>
+  <h3>Temperature</h3>
 
-<br>
+  <div id="c-to-f" class="conversion-div w3-red">
+    Celsius to Fahrenheit
+    <br><br>
+    Celsius: <input type="text" [(ngModel)]="celsius">
+    <br><br>
+    Fahrenheit: {{ (celsius * (9 / 5)) + 32 | number }}
+  </div>
 
-<div id="c-to-f" class="conversion-div w3-red">
- Fahrenheit to Celsius
-  <br><br>
-  Fahrenheit: <input type="text" [(ngModel)]="fahrenheit">
-  <br><br>
-  Celsius: {{ (fahrenheit - 32) * (5 / 9) | number }}
+  <br>
+
+  <div id="c-to-f" class="conversion-div w3-red">
+  Fahrenheit to Celsius
+    <br><br>
+    Fahrenheit: <input type="text" [(ngModel)]="fahrenheit">
+    <br><br>
+    Celsius: {{ (fahrenheit - 32) * (5 / 9) | number }}
+  </div>
+
 </div>

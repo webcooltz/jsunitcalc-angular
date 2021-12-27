@@ -8,12 +8,14 @@ import { TemperatureComponent } from './temperature/temperature.component';
 import { DistanceComponent } from './distance/distance.component';
 
 import { FormsModule } from '@angular/forms';
+import { WeightComponent } from './weight/weight.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TemperatureComponent,
-    DistanceComponent
+    DistanceComponent,
+    WeightComponent
   ],
   imports: [
     BrowserModule,

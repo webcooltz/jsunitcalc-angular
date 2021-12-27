@@ -1,0 +1,23 @@
+<div class="conversion-container">
+
+  <h3>Weight</h3>
+
+  <div id="k-to-lb" class="conversion-div w3-blue">
+    Kilograms to Pounds
+    <br><br>
+    Kilograms: <input type="text" [(ngModel)]="kilograms">
+    <br><br>
+    Pounds: {{ kilograms * 2.205 | number }}
+  </div>
+
+  <br>
+
+  <div id="lb-to-k" class="conversion-div w3-blue">
+  Pounds to Kilograms
+    <br><br>
+    Pounds: <input type="text" [(ngModel)]="pounds">
+    <br><br>
+    Kilograms: {{ pounds / 2.205 | number }}
+  </div>
+
+</div>
