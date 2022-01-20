@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DistanceComponent } from './distance.component';
+import { LiquidComponent } from './liquid.component';
 
-describe('DistanceComponent', () => {
-  let component: DistanceComponent;
-  let fixture: ComponentFixture<DistanceComponent>;
+describe('LiquidComponent', () => {
+  let component: LiquidComponent;
+  let fixture: ComponentFixture<LiquidComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DistanceComponent ]
+      declarations: [ LiquidComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DistanceComponent);
+    fixture = TestBed.createComponent(LiquidComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
