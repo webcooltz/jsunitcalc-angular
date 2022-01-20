@@ -12,4 +12,7 @@ export class TemperatureComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  fahrenheit = 32;
+  celsius = 0;
+
 }

@@ -12,4 +12,8 @@ export class DistanceComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  miles = 1;
+
+  kilometers = 1.61;
+
 }
