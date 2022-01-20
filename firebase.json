@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "jsunitcalc",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
