@@ -18,6 +18,14 @@ export class TemperatureComponent implements OnInit {
   slider2!: number;
   answer!: number | string;
 
+  fColor!: string;
+  cColor!: string;
+  kColor!: string;
+
+  fColor2!: string;
+  cColor2!: string;
+  kColor2!: string;
+
   fahrenheit = 32;
   celsius = 0;
 
@@ -28,26 +36,44 @@ export class TemperatureComponent implements OnInit {
 
   set1Fahrenheit() {
     this.slider1 = 2;
+    this.fColor = "w3-red";
+    this.cColor = "w3-grey";
+    this.kColor = "w3-grey";
   }
 
   set1Celsius() {
     this.slider1 = 1;
+    this.fColor = "w3-grey";
+    this.cColor = "w3-red";
+    this.kColor = "w3-grey";
   }
 
   set1Kelvin() {
     this.slider1 = 3;
+    this.fColor = "w3-grey";
+    this.cColor = "w3-grey";
+    this.kColor = "w3-red";
   }
 
   set2Fahrenheit() {
     this.slider2 = 2;
+    this.fColor2 = "w3-red";
+    this.cColor2 = "w3-grey";
+    this.kColor2 = "w3-grey";
   }
 
   set2Celsius() {
     this.slider2 = 1;
+    this.fColor2 = "w3-grey";
+    this.cColor2 = "w3-red";
+    this.kColor2 = "w3-grey";
   }
 
   set2Kelvin() {
     this.slider2 = 3;
+    this.fColor2 = "w3-grey";
+    this.cColor2 = "w3-grey";
+    this.kColor2 = "w3-red";
   }
 
   convertTemp() {
@@ -76,7 +102,7 @@ export class TemperatureComponent implements OnInit {
     } else if (this.slider1 == 3) {
       // K to F case
         if (this.slider2 == 2) {
-          this.answer =
+          this.answer = (this.num1 - 273.15) * (9 / 5) + 32;
       // K to C case
         } else if (this.slider2 == 1) {
           this.answer = this.num1 - 273.15;
@@ -90,5 +116,7 @@ export class TemperatureComponent implements OnInit {
   }
 
   // TODO - split into smaller functions, call them when statements are met(?)
+
+
 
 }
