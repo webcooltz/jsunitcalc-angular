@@ -1,28 +1,46 @@
 <div class="conversion-container">
 
-  <h3>Temperature</h3>
+  <h2>Temperature</h2>
 
+  <h3>New UI</h3>
   <div id="c-to-f" class="conversion-div w3-red">
     <h3>Pick a type, fill in a number</h3>
-    <br><br>
+    <!-- <br><br> -->
     Number:<input type="text" [(ngModel)]="num1">
+      <!-- celsius -->
+      <span *ngIf="slider1 == 1">&#8451;</span>
+      <!-- fahrenheit -->
+      <span *ngIf="slider1 == 2">&#8457;</span>
+      <!-- kelvin -->
+      <span *ngIf="slider1 == 3">&#8490;</span>
     <br><br>
     <button class="" ngClass="{{ fColor }}" (click)=set1Fahrenheit()>Fahrenheit</button>
     <button class="" ngClass="{{ cColor }}" (click)=set1Celsius()>Celsius</button>
     <button class="" ngClass="{{ kColor }}"(click)=set1Kelvin()>Kelvin</button>
     <br><br>
     <h3>What do you want to convert it to?</h3>
-    <br><br>
+    <!-- <br><br> -->
     <button class="" ngClass="{{ fColor2 }}" (click)=set2Fahrenheit()>Fahrenheit</button>
     <button class="" ngClass="{{ cColor2 }}" (click)=set2Celsius()>Celsius</button>
     <button class="" ngClass="{{ kColor2 }}" (click)=set2Kelvin()>Kelvin</button>
     <br><br>
-    <h3>Answer: {{ answer | number}}</h3>
-    <br><br>
+    <h3>Answer: {{ answer }}
+      <!-- celsius -->
+      <span *ngIf="slider2 == 1">&#8451;</span>
+      <!-- fahrenheit -->
+      <span *ngIf="slider2 == 2">&#8457;</span>
+      <!-- kelvin -->
+      <span *ngIf="slider2 == 3">&#8490;</span>
+    </h3>
+    <!-- <br><br> -->
     <button (click)=convertTemp()>Convert</button>
   </div>
 
   <br><br>
+
+  <hr>
+
+  <h3>Old UI</h3>
 
   <div id="c-to-f" class="conversion-div w3-red">
     Celsius to Fahrenheit
