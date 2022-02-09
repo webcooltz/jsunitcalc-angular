@@ -78,45 +78,56 @@ export class TemperatureComponent implements OnInit {
 
   convertTemp() {
     if (this.slider1 == 2) {
-      // F to C case
       if (this.slider2 == 1) {
-        this.answer = (this.num1 - 32) * (5 / 9);
-      // F to K case
+        this.fahrenheitToCelsius();
       } else if (this.slider2 == 3) {
-        this.answer = (this.num1 - 32) * (5 / 9) + (273.15);
-      // F error handling
+          this.fahrenheitToKelvin();
       } else {
-        this.answer = "fahrenheit error";
+          this.answer = "fahrenheit error";
       }
     } else if (this.slider1 == 1) {
-      // C to F case
         if (this.slider2 == 2) {
-          this.answer = (this.num1 * (9 / 5)) + 32;
-      // C to K case
+          this.celsiusToFahrenheit();
         } else if (this.slider2 == 3) {
-          this.answer = this.num1 + 273.15;
-      // C error handling
+            this.celsiusToKelvin();
         } else {
-          this.answer = "celsius error";
+            this.answer = "celsius error";
         }
     } else if (this.slider1 == 3) {
-      // K to F case
         if (this.slider2 == 2) {
-          this.answer = (this.num1 - 273.15) * (9 / 5) + 32;
-      // K to C case
+          this.kelvinToFahrenheit();
         } else if (this.slider2 == 1) {
-          this.answer = this.num1 - 273.15;
-      // K error handling
+            this.kelvinToCelsius();
         } else {
-          this.answer = "kelvin error";
+            this.answer = "kelvin error";
         }
     } else {
-      this.answer = "general error";
+        this.answer = "general error";
     }
   }
 
-  // TODO - split into smaller functions, call them when statements are met(?)
+  fahrenheitToCelsius() {
+    this.answer = (this.num1 - 32) * (5 / 9);
+  }
 
+  fahrenheitToKelvin() {
+    this.answer = (this.num1 - 32) * (5 / 9) + (273.15);
+  }
 
+  celsiusToFahrenheit() {
+    this.answer = (this.num1 * (9 / 5)) + 32;
+  }
+
+  celsiusToKelvin() {
+    this.answer = this.num1 + 273.15;
+  }
+
+  kelvinToFahrenheit() {
+    this.answer = (this.num1 - 273.15) * (9 / 5) + 32;
+  }
+
+  kelvinToCelsius() {
+    this.answer = this.num1 - 273.15;
+  }
 
 }
