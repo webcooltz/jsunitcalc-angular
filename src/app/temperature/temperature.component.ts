@@ -18,13 +18,13 @@ export class TemperatureComponent implements OnInit {
   slider2!: number;
   answer!: number | string;
 
-  fColor!: string;
-  cColor!: string;
-  kColor!: string;
+  fColor = 'w3-light-grey';
+  cColor = 'w3-light-grey';
+  kColor = 'w3-light-grey';
 
-  fColor2!: string;
-  cColor2!: string;
-  kColor2!: string;
+  fColor2 = 'w3-light-grey';
+  cColor2 = 'w3-light-grey';
+  kColor2 = 'w3-light-grey';
 
   fahrenheit = 32;
   celsius = 0;
@@ -36,7 +36,7 @@ export class TemperatureComponent implements OnInit {
 
   set1Fahrenheit() {
     this.slider1 = 2;
-    this.fColor = "w3-red";
+    this.fColor = "w3-black";
     this.cColor = "w3-grey";
     this.kColor = "w3-grey";
   }
@@ -44,7 +44,7 @@ export class TemperatureComponent implements OnInit {
   set1Celsius() {
     this.slider1 = 1;
     this.fColor = "w3-grey";
-    this.cColor = "w3-red";
+    this.cColor = "w3-black";
     this.kColor = "w3-grey";
   }
 
@@ -52,12 +52,12 @@ export class TemperatureComponent implements OnInit {
     this.slider1 = 3;
     this.fColor = "w3-grey";
     this.cColor = "w3-grey";
-    this.kColor = "w3-red";
+    this.kColor = "w3-black";
   }
 
   set2Fahrenheit() {
     this.slider2 = 2;
-    this.fColor2 = "w3-red";
+    this.fColor2 = "w3-black";
     this.cColor2 = "w3-grey";
     this.kColor2 = "w3-grey";
   }
@@ -65,7 +65,7 @@ export class TemperatureComponent implements OnInit {
   set2Celsius() {
     this.slider2 = 1;
     this.fColor2 = "w3-grey";
-    this.cColor2 = "w3-red";
+    this.cColor2 = "w3-black";
     this.kColor2 = "w3-grey";
   }
 
@@ -73,7 +73,7 @@ export class TemperatureComponent implements OnInit {
     this.slider2 = 3;
     this.fColor2 = "w3-grey";
     this.cColor2 = "w3-grey";
-    this.kColor2 = "w3-red";
+    this.kColor2 = "w3-black";
   }
 
   convertTemp() {
